@@ -3,13 +3,14 @@ Facebook Event Creator
 
 ![fbevent-creator icon](http://dl.dropbox.com/u/2819285/fbevent-creator.png)
 
+
+#### _Don't need to manually create periodical events any more._
+
 Description
 ------------
 
-> Don't need to manually create periodical events any more.
 
-_**Facebook Event Creator**_ is a script that automatically creates events on Facebook periodically.
-
+_**Facebook Event Creator**_ is a Ruby script that automatically creates events on Facebook periodically.
 
 Requirements
 ------------
@@ -29,7 +30,7 @@ How To Use
 Developers
 ----------
  [@yasulab](http://twitter.com/yasulab), [@hanachin_](http://twitter.com/hanachin_), 
- and [@gliese035](http://twitter/gliese035)
+ and [@gliese035](http://twitter.com/gliese035)
 
 Users
 -----
