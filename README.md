@@ -33,12 +33,17 @@ Developers
  and [@gliese035](http://twitter.com/gliese035)
 
 
-Sample Case
+Sample Usecase
 -----------
 Once you set up with this script, you can create the following events automatically.
 
 - [Facebook event of Okinawa.rb](http://www.facebook.com/events/132459433547161/)
 
+Sandbox
+-------
+Feel free to use the following Facebook group to test your script.
+
+- [Facebook Event Creator Test](http://www.facebook.com/groups/261995873883302/)
 
 License
 -------
