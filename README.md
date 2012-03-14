@@ -29,12 +29,16 @@ How To Use
 
 Developers
 ----------
- [@yasulab](http://twitter.com/yasulab), [@hanachin_](http://twitter.com/hanachin_), 
+ [@yasulab](http://twitter.com/yasulab), [@hanachin\_](http://twitter.com/hanachin\_), 
  and [@gliese035](http://twitter.com/gliese035)
 
-Users
------
-- [Okinawa.rb](http://qwik.jp/okinawarb/)
+
+Sample Case
+-----------
+Once you set up with this script, you can create the following events automatically.
+
+- [Facebook event of Okinawa.rb](http://www.facebook.com/events/132459433547161/)
+
 
 License
 -------
