@@ -15,35 +15,29 @@ _**Facebook Event Creator**_ is a Ruby script that automatically creates events 
 Requirements
 ------------
 - Ruby 1.9.3
-- RubyGems: [fb_graph](https://github.com/nov/fb_graph)
-- Unix server
-- crontab (Unix command)
+- RubyGems: koala
+- Unix server + crontab (Unix command)
 
 
-How To Use
+How to use
 ----------
-1. hoge
-2. foo
-3. bar
+1. $ gem install koala
+2. Set your Facebook info, such as Client ID and Access Token, to 'config.json'.
+3. Check if your info is correctly set by typing: "$ ruby test.rb"
+4. Now you can run the following command: "$ ruby fbevent-creator.rb"
+5. (Option) If you run the command via 'cron', you can periodically create Facebook event.
 
 
 Developers
 ----------
- [@yasulab](http://twitter.com/yasulab), [@hanachin\_](http://twitter.com/hanachin\_), 
- and [@gliese035](http://twitter.com/gliese035)
+ [@yasulab](http://twitter.com/yasulab), [@hanachin\_](http://twitter.com/hanachin\_)
 
 
 Sample Usecase
 -----------
-Once you set up with this script, you can create the following events automatically.
+With 'cron', you can periodically create Facebook events like this:
 
 - [Facebook event of Okinawa.rb](http://www.facebook.com/events/132459433547161/)
-
-Sandbox
--------
-Feel free to use the following Facebook group to test your script.
-
-- [Facebook Event Creator Test](http://www.facebook.com/groups/261995873883302/)
 
 License
 -------

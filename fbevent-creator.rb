@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+require 'pp'
 require 'json'
 require 'time'
 require 'koala'
@@ -22,12 +23,6 @@ params = {
 }
 
 event = graph.put_connections(@config['group_id'], 'events', params)
-
-members = graph.get_connections(@config['group_id'], 'members').map{|m| m['id']}
-invited_members = graph.get_connections(event['id'], 'invited').map{|m| m['id']}
-members = members - invited_members
-
-graph.put_connections(event['id'], "invited", :users => members.join(","))
 
 # update information
 @config['times'] = @config['times'] + 1
