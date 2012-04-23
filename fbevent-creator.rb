@@ -6,7 +6,7 @@ require 'koala'
 require 'open-uri'
 require 'active_support/time'
 
-open('config.json') {|f|
+open('config.json', 'r:utf-8') {|f|
   @config = JSON.parse f.read
 }
 
