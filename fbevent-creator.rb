@@ -9,6 +9,8 @@ require 'twitter'
 require 'koala'
 require 'open-uri'
 
+exit if not Time.now.sunday?
+
 @config = YAML.load_file(ARGV[0] || 'config.yml').with_indifferent_access
 
 def next_name(name)
