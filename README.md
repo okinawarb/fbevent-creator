@@ -22,7 +22,7 @@ Requirements
 How to use
 ----------
 1. $ gem install koala
-2. Set your Facebook info, such as Client ID and Access Token, to 'config.json'.
+2. Set your Facebook info, such as Client ID and Access Token, to 'config.yml.
 3. Check if your info is correctly set by typing: "$ ruby test.rb"
 4. Now you can run the following command: "$ ruby fbevent-creator.rb"
 5. (Option) If you run the command via 'cron', you can periodically create Facebook event.

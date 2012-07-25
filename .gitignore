@@ -5,4 +5,4 @@ Icon
 #*
 *.out
 .DS_Store
-config.json
+config.yml
