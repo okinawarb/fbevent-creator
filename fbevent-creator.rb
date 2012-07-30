@@ -14,7 +14,7 @@ exit if not Time.now.monday?
 @config = YAML.load_file(ARGV[0] || 'config.yml').with_indifferent_access
 
 def next_name(name)
-  name =~ @config[:name].force_encoding('ASCII-8BIT')
+  name.force_encoding('ASCII-8BIT') =~ @config[:name]
   eval @config[:next_name]
 end
 
