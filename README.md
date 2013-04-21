@@ -9,24 +9,45 @@ Facebook Event Creator
 Description
 ------------
 
-
-_**Facebook Event Creator**_ is a Ruby script that automatically creates events on Facebook periodically.
+_**Facebook Event Creator**_ is a Ruby script that creates events on Facebook. For example, if you need to weekly create an event on your facebook group, you can automate it by using this script and `cron` command.
 
 Requirements
 ------------
 - Ruby 1.9.3
 - RubyGems: koala
-- Unix server + crontab (Unix command)
+- Unix server + `crontab` (Unix command)
 
 
-How to use
+How to Use
 ----------
-1. Install koala: `gem install koala`
-2. Set your Facebook info, such as Client ID and Access Token, to `config.json`.
-3. Check if your info is correctly set by typing: `ruby test.rb`
-4. Now you can run the following command: `ruby fbevent-creator.rb`
-5. (Option) If you run the command via `cron`, you can periodically create Facebook event.
+1. Download this source code: `git clone git://github.com/yasulab/fbevent-creator.git`
+2. Create a Facebook App w/ `create_event` permission, which creates an event instead of you.
+2. Set its Access Token of to `config.json`.
+3. Check if it works correctly by running test script: `ruby test-facebook-api.rb`.
+4. Now, you can create an event via the script by: `ruby fbevent-creator.rb`
+5. (Option) If you setup `cron` script and make it run the script periodically, then you can periodically create Facebook event.
 
+How to validate a Facebook App
+-------------------------------
+1. Create an Facebook App and get its Client ID (If you don't know of it, visit [here](https://developers.facebook.com/docs/opengraph/getting-started/)).
+2. Replace the following URI's `YOUR_APP_ID` with yours.
+    > https://www.facebook.com/dialog/oauth?client_id=YOUR_APP_ID&scope=create_event&redirect_uri=https://www.facebook.com/connect/login_success.html&response_type=token
+3. Access the URI with your web browswer, and note the following `XXXX` value in the result.
+    > https://www.facebook.com/connect/login_success.html#access_token=XXXX&expires_in=YYYY
+4. Replace `YOUR_ACCEES_TOKEN` in `config.json` (or `config.json.sample`) with `XXXX` that you noted.
+5. Done!
+
+How to Extend Access Token
+--------------------------
+1. Visit [here](https://developers.facebook.com/tools/access_token/) and click `Debug` button next to your app's `User Token`.
+2. Check if `Expires` is close to now. If not, skip this section (re-visit this section when it's close).
+3. If close, replace `APP_ID`, `APP_SECRET`, and `ACCESS_TOKEN` with yours.
+   > https://graph.facebook.com/oauth/access_token?client_id=APP_ID&client_secret=APP_SECRET&grant_type=fb_exchange_token&fb_exchange_token=ACCESS_TOKEN
+4. Visit the replaced URL with your web browser.
+5. If it works correctly, you'll see something like this:
+   > access_token=YOUR_ACCESS_TOKEN&expires=EXPIRED_DATE
+6. Visit [Debugger Tool](https://developers.facebook.com/tools/debug) and type `YOUR_ACCESS_TOKEN` above.
+7. Check `Expired:` and if it's `in about 2months`, you've successfully extended the token, yay!
 
 Developers
 ----------
