@@ -21,11 +21,11 @@ Requirements
 
 How to use
 ----------
-1. $ gem install koala
-2. Set your Facebook info, such as Client ID and Access Token, to 'config.json'.
-3. Check if your info is correctly set by typing: "$ ruby test.rb"
-4. Now you can run the following command: "$ ruby fbevent-creator.rb"
-5. (Option) If you run the command via 'cron', you can periodically create Facebook event.
+1. Install koala: `gem install koala`
+2. Set your Facebook info, such as Client ID and Access Token, to `config.json`.
+3. Check if your info is correctly set by typing: `ruby test.rb`
+4. Now you can run the following command: `ruby fbevent-creator.rb`
+5. (Option) If you run the command via `cron`, you can periodically create Facebook event.
 
 
 Developers
@@ -35,7 +35,7 @@ Developers
 
 Sample Usecase
 -----------
-With 'cron', you can periodically create Facebook events like this:
+With `cron`, you can periodically create Facebook events like this:
 
 - [Facebook event of Okinawa.rb](http://www.facebook.com/events/132459433547161/)
 
