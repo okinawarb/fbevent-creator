@@ -21,13 +21,14 @@ Requirements
 How to Use
 ----------
 1. Download this source code: `git clone git://github.com/yasulab/fbevent-creator.git`
-2. Create a Facebook App w/ `create_event` permission, which creates an event instead of you.
-2. Set its Access Token of to `config.json`.
-3. Check if it works correctly by running test script: `ruby test-facebook-api.rb`.
-4. Now, you can create an event via the script by: `ruby fbevent-creator.rb`
-5. (Option) If you setup `cron` script and make it run the script periodically, then you can periodically create Facebook event.
+2. Rename `config.json.sample` to `config.json` and set your own information.
+3. Create a Facebook App w/ `create_event` permission, which creates an event instead of you.
+4. Set its Access Token of to `config.json`.
+5. Check if it works correctly by running test script: `ruby test-facebook-api.rb`.
+6. Now, you can create an event via the script by: `ruby fbevent-creator.rb`
+7. (Option) If you setup `cron` script and make it run the script periodically, then you can periodically create Facebook event.
 
-How to validate a Facebook App
+How to Activate your Facebook App
 -------------------------------
 1. Create an Facebook App and get its Client ID (If you don't know of it, visit [here](https://developers.facebook.com/docs/opengraph/getting-started/)).
 2. Replace the following URI's `YOUR_APP_ID` with yours.
@@ -41,7 +42,7 @@ How to validate a Facebook App
 4. Replace `YOUR_ACCEES_TOKEN` in `config.json` (or `config.json.sample`) with `XXXX` that you noted.
 5. Done!
 
-How to Extend Access Token
+How to Extend your Access Token
 --------------------------
 1. Visit [here](https://developers.facebook.com/tools/access_token/) and click `Debug` button next to your app's `User Token`.
 2. Check if `Expires` is close to now. If not, skip this section (re-visit this section when it's close).
