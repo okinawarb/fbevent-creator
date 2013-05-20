@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-require 'time'
+
 require 'yaml'
 require 'twitter'
 require 'open-uri'
-require 'active_support/time'
 require 'active_support/core_ext'
 
 @config = YAML.load_file(ARGV[0] || 'config.yml').with_indifferent_access

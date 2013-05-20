@@ -9,9 +9,9 @@ access_token: YOUR_FACEBOOK_ACCESS_TOKEN
 # Params for creating Facebook Event
 picture_uri:  https://dl.dropbox.com/u/3622136/okinawarb.jpg
 group_id:     194735460599272
-name: !ruby/regexp '/The (\d+)th Okinawa.rb Meetup!/'
-next_name: '"The #{$1.succ}th Okinawa.rb Meetup!"'
-location: GeekHouse Okinawa, Japan
+name:         !ruby/regexp '/The (\d+)th Okinawa.rb Meetup!/'
+next_name:    '"The #{$1.succ}th Okinawa.rb Meetup!"'
+location:     GeekHouse Okinawa, Japan
 description: |-
   This is a weekly meetup hosted by Okinawa.rb and GeekHouse Okinawa, where people who like Ruby/Rails get together and casually share their information with snacks and drinks!
 
