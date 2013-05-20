@@ -8,6 +8,7 @@ GEM
     faraday (0.8.7)
       multipart-post (~> 1.1)
     i18n (0.6.4)
+    json (1.7.7)
     koala (1.6.0)
       addressable (~> 2.2)
       faraday (~> 0.8)
@@ -26,5 +27,6 @@ PLATFORMS
 DEPENDENCIES
   active_support
   i18n
+  json (~> 1.7.7)
   koala
   twitter
