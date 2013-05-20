@@ -9,14 +9,16 @@ Facebook Event Creator
 Description
 ------------
 
-_**Facebook Event Creator**_ is a Ruby script that creates events on Facebook. For example, if you need to weekly create an event on your facebook group, you can automate it by using this script and `cron` command.
+_**Facebook Event Creator**_ is a Ruby script that creates events on Facebook, which can be run on Heroku.
+Using this script and Heroku, you can weekly create an Facebook event for a group.
+For example, Okinawa Ruby User Group, often called as [Okinawa.rb](http://facebook.com/groups/okinawarb/), holds a weekly meetup in its Facebook Group. And the event is automatically created by this scrip running on Heroku.
+
 
 Requirements
 ------------
 - Ruby 1.9.3
 - RubyGems: koala
-- Unix server + `crontab` (Unix command)
-
+- (Option) [Heroku](http://www.heroku.com) + [Heroku Scheduler](https://addons.heroku.com/scheduler)
 
 How to Use
 ----------
@@ -26,7 +28,7 @@ How to Use
 4. Set its Access Token of to `config.json`.
 5. Check if it works correctly by running test script: `ruby test-facebook-api.rb`.
 6. Now, you can create an event via the script by: `ruby fbevent-creator.rb`
-7. (Option) If you setup `cron` script and make it run the script periodically, then you can periodically create Facebook event.
+7. (Option) If you upload this script to [Heroku](http://www.heroku.com) and install [Heroku Scheduler](https://addons.heroku.com/scheduler), you'll able to periodically create Facebook event.
 
 How to Activate your Facebook App
 -------------------------------
@@ -65,7 +67,7 @@ Developers
 
 Sample Usecase
 -----------
-With `cron`, you can periodically create Facebook events like this:
+With this script and Heroku, you can periodically create Facebook events like this:
 
 - [Facebook event of Okinawa.rb](http://www.facebook.com/events/132459433547161/)
 
