@@ -2,14 +2,18 @@
 # https://developers.facebook.com/tools/explorer/
 # To get 60 days access token
 # https://graph.facebook.com/oauth/access_token?client_id=your_client_id&client_secret=your_client_secret&grant_type=fb_exchange_token&fb_exchange_token=your_access_token
-access_token: your_access_token
-picture_uri: https://dl.dropbox.com/u/3622136/okinawarb.jpg
-group_id: 194735460599272
+
+# Facebook Access Token
+access_token: YOUR_FACEBOOK_ACCESS_TOKEN
+
+# Params for creating Facebook Event
+picture_uri:  https://dl.dropbox.com/u/3622136/okinawarb.jpg
+group_id:     194735460599272
 name: !ruby/regexp '/The (\d+)th Okinawa.rb Meetup!/'
 next_name: '"The #{$1.succ}th Okinawa.rb Meetup!"'
 location: GeekHouse Okinawa, Japan
-description: |
-  "This is a weekly meetup hosted by Okinawa.rb and GeekHouse Okinawa, where people who like Ruby/Rails get together and casually share their information with snacks and drinks!
+description: |-
+  This is a weekly meetup hosted by Okinawa.rb and GeekHouse Okinawa, where people who like Ruby/Rails get together and casually share their information with snacks and drinks!
 
   The meetup starts from about 7pm. Beginners are very welcome! If there is a new person, we'll introduce themselves each other and share what they'd like to do for the future.
 
@@ -17,10 +21,11 @@ description: |
   NOTE: You can't park at GeekHouse Okinawa. If you come here by car, you need to park at somewhere around it, such as Ryukyu Bank and Man-ko Park.
   
   Okinawa.rb, Okinawa Ruby User Group
-  http://www.qwik.jp/okinawarb/"
-token_expire_notification: '@yasulab The Facebook API token of your fbevent-creator seems to be expired. Check out the log.'
+  http://www.qwik.jp/okinawarb/
+
+# Twitter Notification (not required)
 twitter:
-  consumer_key: your_twitter_consumer_key
-  consumer_secret: your_twitter_consumer_secret
-  oauth_token: your_twitter_oauth_token
-  oauth_token_secret: your_twitter_oauth_token_secret
+  consumer_key:       YOUR_TWITTER_CONSUMER_KEY
+  consumer_secret:    YOUR_TWITTER_CONSUMER_SECRET
+  oauth_token:        YOUR_TWITTER_OAUTH_TOKEN
+  oauth_token_secret: YOUR_TWITTER_OAUTH_TOKEN_SECRET
