@@ -23,9 +23,9 @@ Requirements
 How to Use
 ----------
 1. Download this source code: `git clone git://github.com/yasulab/fbevent-creator.git`
-2. Rename `config.json.sample` to `config.json` and set your own information.
+2. Rename `config.yml.sample` to `config.yml` and set your own information.
 3. Create a Facebook App w/ `create_event` permission, which creates an event instead of you.
-4. Set its Access Token of to `config.json`.
+4. Set its Access Token of to `config.yml`.
 5. Check if it works correctly by running test script: `ruby test-facebook-api.rb`.
 6. Now, you can create an event via the script by: `ruby fbevent-creator.rb`
 7. (Option) If you upload this script to [Heroku](http://www.heroku.com) and install [Heroku Scheduler](https://addons.heroku.com/scheduler), you'll able to periodically create Facebook event.
