@@ -11,7 +11,7 @@ Description
 
 _**Facebook Event Creator**_ is a Ruby script that creates events on Facebook, which can be run on Heroku.
 Using this script and Heroku, you can weekly create an Facebook event for a group.
-For example, Okinawa Ruby User Group, often called as `Okinawa.rb`, holds a weekly meetup in its Facebook Group. And the event is automatically created by this scrip running on Heroku.
+For example, Okinawa Ruby User Group, often called as [Okinawa.rb](http://facebook.com/groups/okinawarb/), holds a weekly meetup in its Facebook Group. And the event is automatically created by this scrip running on Heroku.
 
 
 Requirements
