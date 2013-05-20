@@ -18,7 +18,7 @@ description: |
   
   Okinawa.rb, Okinawa Ruby User Group
   http://www.qwik.jp/okinawarb/"
-token_expire_notification: '@hanachin_ さん、Facebookのイベント立てるの失敗してますよ。'
+token_expire_notification: '@yasulab The Facebook API token of your fbevent-creator seems to be expired. Check out the log.'
 twitter:
   consumer_key: your_twitter_consumer_key
   consumer_secret: your_twitter_consumer_secret
