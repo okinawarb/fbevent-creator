@@ -47,6 +47,8 @@ begin
 rescue Koala::Facebook::APIError => e
   ## NOTE: Token Expiration Notifier via Twitter
   #twitter = Twitter::Client.new(@config[:twitter])
-  #twitter.update @config[:token_expire_notification]
+  #twitter.update "@yasulab The Facebook API token of your fbevent-creator seems to be expired. Check out the log.
+
+  # print the error
   pp e
 end

@@ -1,27 +1,15 @@
 # -*- coding: utf-8 -*-
-require 'pp'
-require 'json'
 require 'time'
-require 'koala'
+require 'yaml'
 require 'twitter'
 require 'open-uri'
 require 'active_support/time'
+require 'active_support/core_ext'
 
-# load config.json
-open('config.json') {|f|
-  @config = JSON.parse f.read
-}
+@config = YAML.load_file(ARGV[0] || 'config.yml').with_indifferent_access
+twitter = Twitter::Client.new(@config[:twitter])
 
-# tweet
-Twitter.configure do |config|
-  config.consumer_key = @config['twitter_consumer_key']
-  config.consumer_secret = @config['twitter_consumer_secret']
-  config.oauth_token = @config['twitter_access_token']
-  config.oauth_token_secret = @config['twitter_token_secret']
-end
-
-# show my timeline
-Twitter.home_timeline.each do |tw|
+# Twitter Test: Show Timeline
+twitter.home_timeline.each do |tw|
   puts tw['text']
 end
-
