@@ -44,6 +44,7 @@ begin
   ##       To do it, set your Twitter API Token/Key to `config.yml`.
   #twitter = Twitter::Client.new(@config[:twitter])
   #twitter.update "#{name} is open! Come and join us! #{fbevent_base_url}/#{event['id']}"
+
 rescue Koala::Facebook::APIError => e
   ## NOTE: Token Expiration Notifier via Twitter
   #twitter = Twitter::Client.new(@config[:twitter])
