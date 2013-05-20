@@ -1,33 +1,44 @@
+#!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
+ENV['TZ'] = 'America/Los_Angeles'
+
 require 'pp'
-require 'json'
-require 'time'
+require 'yaml'
+require 'active_support/core_ext'
+require 'twitter'
 require 'koala'
 require 'open-uri'
-require 'active_support/time'
 
-open('config.json', 'r:utf-8') {|f|
-  @config = JSON.parse f.read
-}
+exit if not Time.now.sunday?
 
-graph = Koala::Facebook::API.new(@config['access_token'])
-picture = Koala::UploadableIO.new(open(@config['picture_uri']).path, 'image')
+@config = YAML.load_file(ARGV[0] || 'config.yml').with_indifferent_access
 
-params = {
-  :picture => picture,
-  :name => @config['name'] % @config['times'],
-  :description => @config['description'],
-  :location => @config['location'],
-  :start_time => Time.parse(@config['start_time']),
-  :page_id => @config['group_id']
-}
+def next_name(name)
+  name.force_encoding('ASCII-8BIT') =~ @config[:name]
+  eval @config[:next_name]
+end
 
-event = graph.put_connections(@config['group_id'], 'events', params)
+begin
+  graph = Koala::Facebook::API.new(@config[:access_token])
 
-# update information
-@config['times'] = @config['times'] + 1
-@config['start_time'] = 7.days.since(Time.parse(@config['start_time']))
+  picture = Koala::UploadableIO.new(open(@config[:picture_uri]).path, 'image')
+  recent_event = graph.get_connections(@config[:group_id], 'events').first
+  name = next_name(recent_event['name'])
+  start_time = Time.parse(recent_event['start_time'])
 
-open('config.json', 'w') {|f|
-  f.puts JSON.pretty_generate @config
-}
+  params = {
+    picture:     picture,
+    name:        name,
+    description: @config[:description],
+    location:    @config[:location],
+    start_time:  start_time + 1.week,
+    page_id:     @config[:group_id],
+  }
+
+  graph.put_connections(@config[:group_id], 'events', params)
+rescue Koala::Facebook::APIError => e
+  twitter = Twitter::Client.new(@config[:twitter])
+  twitter.update @config[:token_expire_notification]
+
+  pp e
+end
