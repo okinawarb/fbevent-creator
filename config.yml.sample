@@ -5,31 +5,19 @@
 access_token: your_access_token
 picture_uri: https://dl.dropbox.com/u/3622136/okinawarb.jpg
 group_id: 194735460599272
-name: !ruby/regexp '/第(\d+)回 Okinawa.rb Meetup!/'
-next_name: '"第#{$1.succ}回 Okinawa.rb Meetup!"'
-location: ギークハウス沖縄(那覇市古波蔵2-18-14)
+name: !ruby/regexp '/The (\d+)th Okinawa.rb Meetup!/'
+next_name: '"The #{$1.succ}th Okinawa.rb Meetup!"'
+location: GeekHouse Okinawa, Japan
 description: |
-  毎週平日の夜に集まって沖縄のRubyistの皆様とハックしたりコミュニケーションが取れる場が欲しいです!
-  なので、Okinawa.rbの毎週Meetupを始めました。
+  "This is a weekly meetup hosted by Okinawa.rb and GeekHouse Okinawa, where people who like Ruby/Rails get together and casually share their information with snacks and drinks!
 
-  だいたい19:00頃から始めます。途中入退場自由なので気軽にお越し下さい。
-  はじめての方も大歓迎です。自己紹介したり、今後〜したい、〜やりたいとか、色々お話出来たらいいなぁと思います!
-  参加して何をするか一言頂けると嬉しいです
+  The meetup starts from about 7pm. Beginners are very welcome! If there is a new person, we'll introduce themselves each other and share what they'd like to do for the future.
 
-
-  ※プロジェクタや電源・無線等自由に使えます
-  ※会場のギークハウス沖縄には駐車場が無いので、できれば公共交通機関を利用してくださると嬉しいです。
-  会場のギークハウス沖縄近くの駐車場情報
-  ・ギークハウス沖縄近くの沖縄銀行さんの駐車場(コインパーキング)
-
-
-  Okinawa.rbの活動内容は以下のサイトでも随時アップデートしています。
-  メーリングリストへの参加も宜しくお願いします。
-  Okinawa.rb WebSite
-  http://www.qwik.jp/okinawarb/
-
-  Okinawa.rb Google Groups
-  https://groups.google.com/group/okinawarb
+  Also, you can freely use wireless, power source, and a projector if you have something to share.
+  NOTE: You can't park at GeekHouse Okinawa. If you come here by car, you need to park at somewhere around it, such as Ryukyu Bank and Man-ko Park.
+  
+  Okinawa.rb, Okinawa Ruby User Group
+  http://www.qwik.jp/okinawarb/"
 token_expire_notification: '@hanachin_ さん、Facebookのイベント立てるの失敗してますよ。'
 twitter:
   consumer_key: your_twitter_consumer_key

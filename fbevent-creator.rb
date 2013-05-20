@@ -9,6 +9,7 @@ require 'twitter'
 require 'koala'
 require 'open-uri'
 
+# Heroku Scheduler Setting: run this script on Sunday
 exit if not Time.now.sunday?
 
 @config = YAML.load_file(ARGV[0] || 'config.yml').with_indifferent_access
@@ -35,10 +36,13 @@ begin
     page_id:     @config[:group_id],
   }
 
+  # create facebook event for a group w/ given information
   graph.put_connections(@config[:group_id], 'events', params)
-rescue Koala::Facebook::APIError => e
-  twitter = Twitter::Client.new(@config[:twitter])
-  twitter.update @config[:token_expire_notification]
 
+  ## NOTE: You can announce you've created the facebook event, if you want.
+  ##       To do it, set your Twitter API Token/Key to `config.yml`.
+  #twitter = Twitter::Client.new(@config[:twitter])
+  #twitter.update @config[:token_expire_notification]
+rescue Koala::Facebook::APIError => e
   pp e
 end
