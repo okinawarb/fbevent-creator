@@ -41,7 +41,7 @@ How to Activate your Facebook App
 
     `https://www.facebook.com/connect/login_success.html#access_token=XXXX&expires_in=YYYY`
 
-4. Replace `YOUR_ACCEES_TOKEN` in `config.json` (or `config.json.sample`) with `XXXX` that you noted.
+4. Replace `YOUR_ACCEES_TOKEN` in `config.yml` (or `config.yml.sample`) with `XXXX` that you noted.
 5. Done!
 
 How to Extend your Access Token
